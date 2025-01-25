@@ -1,0 +1,29 @@
+{
+    "title": "IF Science API Documentation",
+    "description": "Official API documentation for IF Science platform",
+    "author": "IF Science Team",
+    "language": "en",
+    "plugins": [
+        "expandable-chapters",
+        "code",
+        "copy-code-button",
+        "theme-api",
+        "anchor-navigation-ex"
+    ],
+    "pluginsConfig": {
+        "theme-api": {
+            "theme": "dark",
+            "languages": [
+                {
+                    "lang": "curl",
+                    "name": "cURL",
+                    "default": true
+                },
+                {
+                    "lang": "python",
+                    "name": "Python"
+                }
+            ]
+        }
+    }
+}
