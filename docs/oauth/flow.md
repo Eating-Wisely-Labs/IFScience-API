@@ -73,7 +73,7 @@ Content-Type: application/json
 Include the access token in the Authorization header when making API requests:
 
 ```http
-GET https://ifsci.wtf/api/v1/user
+GET https://ifsci.wtf/api/oauth/user
 Authorization: Bearer ACCESS_TOKEN
 ```
 

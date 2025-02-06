@@ -86,12 +86,12 @@ Content-Type: application/json
 
 ### Common Token Errors
 
-1. Invalid Token， or Invalid Refresh Token
+1. Invalid Token, or Invalid Refresh Token
 ```json
 {
-    "code": "401",
+    "code": 401,
     "data": null,
-    "message: "Invalid token"
+    "message": "Invalid token"
 }
 ```
 
