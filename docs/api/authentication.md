@@ -7,7 +7,7 @@ All API requests to IF Science platform must be authenticated using OAuth 2.0 ac
 Include the access token in the `Authorization` header of all API requests:
 
 ```http
-GET /api/v1/user
+GET /api/oauth/user
 Authorization: Bearer YOUR_ACCESS_TOKEN
 ```
 
@@ -22,14 +22,15 @@ Access tokens are valid for 1 hour (3600 seconds) after issuance. The expiration
 When an access token expires, use the refresh token to obtain a new one:
 
 ```http
-POST https://ifsci.wtf/oauth/token
+POST https://ifsci.wtf/api/oauth/token
 Content-Type: application/json
 
 {
-  "grant_type": "refresh_token",
   "client_id": "YOUR_CLIENT_ID",
   "client_secret": "YOUR_CLIENT_SECRET",
-  "refresh_token": "YOUR_REFRESH_TOKEN"
+  "grant_type": "authorization_code",
+  "code": "AUTH_CODE",
+  "redirect_uri": "https://your-app.com/oauth/callback"
 }
 ```
 
@@ -38,27 +39,40 @@ Content-Type: application/json
 {
   "access_token": "NEW_ACCESS_TOKEN",
   "refresh_token": "NEW_REFRESH_TOKEN",
-  "expires_in": 3600
+  "expires_in": 3600,
+  "token_type": "Bearer"
 }
 ```
 
 ## Error Responses
 
-### Invalid Token
+### Invalid Authorization Code
 
 ```json
 {
-  "error": "invalid_token",
-  "error_description": "The access token has expired"
+  "code": "401",
+  "data": null,
+  "message": "Invalid code"
 }
 ```
 
-### Invalid Refresh Token
+### Invalid Client Id
 
 ```json
 {
-  "error": "invalid_grant",
-  "error_description": "The refresh token is invalid or has expired"
+  "code": "401",
+  "data": null,
+  "message": "Invalid client_id"
+}
+```
+
+### Invalid Client Secret
+
+```json
+{
+  "code": "401",
+  "data": null,
+  "message": "Invalid client_secret"
 }
 ```
 

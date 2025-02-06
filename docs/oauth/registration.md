@@ -1,4 +1,7 @@
-# Developer Registration
+# Developer Registration (WIP)
+
+⚠️Warning: The content of this section is under development and will be provided later. If you have any requirements, please contact support@ifsci.wtf
+
 
 Before you can integrate with IF Science API, you need to register as a developer and obtain your API credentials.
 
@@ -14,6 +17,7 @@ https://ifsci.wtf/developer/register
 You will need to provide the following information:
 
 - Application Name (e.g., "Stadium Science")
+- Application Logo
 - Application Description
 - Application Website URL
 - OAuth Callback URL

@@ -2,7 +2,7 @@
 
 All notable changes to the IF Science API will be documented in this file.
 
-## [1.0.0] - 2025-01-25
+## [1.0.0] - 2025-02-06
 
 ### Added
 - Initial release of IF Science API
@@ -13,9 +13,8 @@ All notable changes to the IF Science API will be documented in this file.
 - Comprehensive API documentation
 
 ### API Endpoints
-- `/api/v1/user` - User profile management
-- `/api/v1/plans` - Fasting plan management
-- `/api/v1/checkins` - Check-in system
+- `/api/oauth/user` - User profile management
+
 
 ### OAuth Features
 - Secure authorization flow
@@ -37,3 +36,7 @@ All notable changes to the IF Science API will be documented in this file.
 - Group challenges
 - Achievement system
 - Custom plan rules
+
+### API Endpoints
+- `/api/v1/app/checkin/plan` - Fasting plan management
+- `/api/v1/app/checkin/records` - Check-in system

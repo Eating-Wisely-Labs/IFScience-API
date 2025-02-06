@@ -19,7 +19,7 @@
 Exchange authorization code for tokens:
 
 ```http
-POST https://ifsci.wtf/oauth/token
+POST https://ifsci.wtf/api/oauth/token
 Content-Type: application/json
 
 {
@@ -46,13 +46,10 @@ Content-Type: application/json
 When an access token expires, use the refresh token to obtain a new one:
 
 ```http
-POST https://ifsci.wtf/oauth/token
+POST https://ifsci.wtf/api/oauth/refresh
 Content-Type: application/json
 
 {
-    "grant_type": "refresh_token",
-    "client_id": "YOUR_CLIENT_ID",
-    "client_secret": "YOUR_CLIENT_SECRET",
     "refresh_token": "REFRESH_TOKEN"
 }
 ```
@@ -89,27 +86,12 @@ Content-Type: application/json
 
 ### Common Token Errors
 
-1. Invalid Token
+1. Invalid Token， or Invalid Refresh Token
 ```json
 {
-    "error": "invalid_token",
-    "error_description": "The access token has expired"
-}
-```
-
-2. Invalid Refresh Token
-```json
-{
-    "error": "invalid_grant",
-    "error_description": "The refresh token is invalid or has expired"
-}
-```
-
-3. Invalid Client
-```json
-{
-    "error": "invalid_client",
-    "error_description": "Client authentication failed"
+    "code": "401",
+    "data": null,
+    "message: "Invalid token"
 }
 ```
 

@@ -46,7 +46,7 @@ https://your-app.com/oauth/callback?code=AUTH_CODE&state=random_state_string
 Exchange the authorization code for an access token:
 
 ```http
-POST https://ifsci.wtf/oauth/token
+POST https://ifsci.wtf/api/oauth/token
 Content-Type: application/json
 
 {
@@ -63,7 +63,8 @@ Content-Type: application/json
 {
   "access_token": "ACCESS_TOKEN",
   "refresh_token": "REFRESH_TOKEN",
-  "expires_in": 3600
+  "expires_in": 3600,
+  "token_type": "bearer"
 }
 ```
 
