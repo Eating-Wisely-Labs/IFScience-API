@@ -26,9 +26,39 @@ Authorization: Bearer ACCESS_TOKEN
     "data": {
         "list": [
             {
-                "record_id": 456,
-                "plan_id": 123,
-                "checkin_time": "2025-01-01T10:00:00Z",
+                "account_id": 80,
+                "record_id": 245,
+                "plan_id": 21,
+                "comment_uid": "1889882969084666073",
+                "checkin_time": "2025-02-13T11:42:00.000Z",
+                "post": {
+                    "comment_uid": "1889882969084666073",
+                    "image": "https://image.ifsci.wtf/tw/img/Gjo2ii6aIAQHfsY.jpg",
+                    "text": "Beef noodles stir-fried. Two servings, roughly 400g each. Estimated per serving: 600 kcal, 25g fat, 80g carbs, 30g protein. Total: 1200 kcal, 50g fat, 160g carbs, 60g protein.",
+                    "food_items": [
+                        {
+                            "name": "calories",
+                            "value": "1200",
+                            "unit": " kcal"
+                        },
+                        {
+                            "name": "fat",
+                            "value": "50",
+                            "unit": " g"
+                        },
+                        {
+                            "name": "carbs",
+                            "value": "160",
+                            "unit": " g"
+                        },
+                        {
+                            "name": "protein",
+                            "value": "60",
+                            "unit": " g"
+                        }
+                    ],
+                    "create_time": "2025-02-13T11:43:06.000Z"
+                }
             }
         ],
         "total": 25,
